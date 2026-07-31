@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fort Worth Police Department | Roleplay Command Portal</title>
+<meta name="description" content="Fort Worth Police Department roleplay command portal — handbook, standard operating procedures, department policy, command staff, and radio codes.">
+<meta name="keywords" content="Fort Worth Police Department, FWPD, roleplay, handbook, SOP, radio codes, FiveM">
+<meta name="theme-color" content="#0b1220">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Scroll progress bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Skip link for accessibility -->
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="#home" class="brand">
+      <span class="brand-badge" aria-hidden="true">
+        <svg viewBox="0 0 48 48" width="30" height="30">
+          <path d="M24 3 L43 11 V22 C43 33 35.5 41.5 24 45 C12.5 41.5 5 33 5 22 V11 Z" fill="none" stroke="currentColor" stroke-width="2.4"/>
+          <path d="M24 12 L24 30 M16 30 L32 30" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          <circle cx="24" cy="20" r="4.2" fill="none" stroke="currentColor" stroke-width="2.2"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <strong>FORT WORTH</strong>
+        <em>POLICE DEPARTMENT</em>
+      </span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#handbook" class="nav-link">Handbook</a>
+      <a href="#sop" class="nav-link">SOP</a>
+      <a href="#policies" class="nav-link">Policies</a>
+      <a href="#command" class="nav-link">Command Staff</a>
+      <a href="#codes" class="nav-link">Radio Codes</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Open search" aria-expanded="false" aria-controls="searchPanel">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle light and dark mode">
+        <svg id="themeIconMoon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        <svg id="themeIconSun" width="18" height="18" viewBox="0 0 24 24" fill="none" style="display:none"><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8L6 18M18 6l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Floating search panel -->
+<div class="search-panel" id="searchPanel" role="dialog" aria-modal="true" aria-label="Site search">
+  <div class="search-panel-inner">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    <input type="text" id="searchInput" placeholder="Search the handbook, SOPs, policies, and radio codes…" aria-label="Search site content" autocomplete="off">
+    <button class="icon-btn" id="searchClose" aria-label="Close search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <div class="search-results" id="searchResults"></div>
+</div>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg" id="heroBg" aria-hidden="true"></div>
+  <div class="hero-scanline" aria-hidden="true"></div>
+  <div class="hero-content reveal">
+    <p class="hero-eyebrow">CITY OF FORT WORTH &nbsp;·&nbsp; ROLEPLAY COMMAND PORTAL</p>
+    <h1 class="hero-title">FORT WORTH<span>POLICE DEPARTMENT</span></h1>
+    <p class="hero-subtitle">Professionalism <span class="dot">•</span> Integrity <span class="dot">•</span> Service</p>
+    <div class="hero-actions">
+      <a href="#handbook" class="btn btn-primary">
+        <span>View Handbook</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#sop" class="btn btn-secondary">
+        <span>View SOP</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>1</strong><span>Department Employees</span></div>
+      <div class="hero-stat"><strong>24/7</strong><span>Dispatch Coverage</span></div>
+    </div>
+  </div>
+  <a href="#handbook" class="hero-scroll-cue" aria-label="Scroll to content">
+    <span></span>
+  </a>
+</section>
+
+<!-- ============ HANDBOOK ============ -->
+<section class="section" id="handbook">
+  <div class="section-inner">
+    <p class="section-eyebrow">GENERAL ORDERS</p>
+    <h2 class="section-title">Department Handbook</h2>
+    <p class="section-lede">The governing standards of conduct, appearance, and duty performance for every sworn member of the Fort Worth Police Department roleplay division.</p>
+
+    <div class="accordion" id="handbookAccordion" data-searchable="handbook">
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">01</span><span class="acc-title">Mission Statement</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <p>The Fort Worth Police Department exists to protect the life, property, and constitutional rights of every resident and visitor within our jurisdiction. Our mission is carried out through impartial enforcement of the law, proactive community engagement, and a standard of accountability that begins with every individual officer and extends through the full chain of command.</p>
+          <p>We measure our success not only by arrests made or citations issued, but by the trust the community places in us. Every member of this department, sworn or civilian, is expected to act as a steward of that trust in every interaction, on and off duty.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">02</span><span class="acc-title">Core Values</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <p>Integrity: Officers act consistently with honesty and the law, even when no one is watching. Fabrication of reports, evidence, or radio traffic is grounds for immediate suspension pending investigation.</p>
+          <p>Professionalism: Every interaction, from a routine traffic stop to a high-risk warrant, is conducted with composure and respect for the individuals involved, including suspects and offenders.</p>
+          <p>Service: The department exists for the community it serves. Officers are expected to treat calls for service, regardless of severity, with the same diligence and courtesy.</p>
+          <p>Accountability: Mistakes are corrected through supervision, retraining, and if necessary, discipline — not concealment. Supervisors are expected to document and address deficiencies promptly.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">03</span><span class="acc-title">Department Expectations</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <p>Officers are expected to report for shift briefing on time, in proper uniform, with assigned equipment inspected and serviceable. Radio checks are mandatory at the start of every shift before units are marked available.</p>
+          <p>All personnel are expected to remain reachable via department radio channels while on duty and to relay unit status (10-8, 10-6, 10-7, etc.) promptly and accurately so dispatch and command staff maintain an accurate picture of patrol coverage.</p>
+          <p>Members are expected to know and apply the contents of this handbook and the associated Standard Operating Procedures. Ignorance of policy is not a defense in an internal review.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">04</span><span class="acc-title">Professional Conduct</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <p>Officers will address members of the public, suspects, and fellow officers with respect and restraint. Use of profanity, racial or derogatory language, or demeaning remarks toward any individual is strictly prohibited and subject to immediate disciplinary review.</p>
+          <p>De-escalation is the preferred approach in all non-lethal encounters. Officers are expected to attempt verbal resolution before escalating to physical control tactics whenever the situation allows for it.</p>
+          <p>Off-duty conduct that reflects poorly on the department, including conduct within the broader roleplay community, may be subject to internal review at the discretion of Command Staff.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">05</span><span class="acc-title">Uniform Standards</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <p>The standard patrol uniform consists of the department-issue navy uniform shirt and trousers, duty belt with authorized equipment, agency patches on both shoulders, a visible name plate, and badge. Uniforms must be clean, pressed, and free of unauthorized modification.</p>
+          <p>Specialty units (SWAT, K9, Traffic, Motors) may be issued distinct uniform variants appropriate to their function, subject to approval from their division commander.</p>
+          <p>Personal grooming must meet department standards for a professional appearance. Visible unauthorized patches, pins, or modifications to the uniform are not permitted while on duty.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">06</span><span class="acc-title">Vehicle Standards</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <p>Marked patrol vehicles must be inspected at the start of each shift for damage, cleanliness, and functioning emergency equipment, including light bars, sirens, and dash camera systems. Any deficiency must be reported to a supervisor before the vehicle is placed into service.</p>
+          <p>Vehicles are to be operated in accordance with posted traffic laws except when responding to a Priority 1 call or engaged in an authorized pursuit, at which point department pursuit policy governs.</p>
+          <p>Unmarked and specialty unit vehicles must display authorized emergency equipment only, and their assignment is tracked through the division commander's roster.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">07</span><span class="acc-title">Use of Force</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <p>Force must be objectively reasonable, necessary, and proportional to the threat presented, consistent with the department's Use of Force Continuum (see SOP section). Officers will de-escalate whenever it is safe and feasible to do so.</p>
+          <p>Any application of force above compliant handcuffing must be documented in a use-of-force report and reviewed by a shift supervisor before the officer clears the scene.</p>
+          <p>Deadly force is authorized only when an officer reasonably believes it is necessary to prevent death or serious bodily harm to themselves or another person.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">08</span><span class="acc-title">Arrest Procedures</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <p>Officers must have probable cause prior to effecting a custodial arrest and should articulate that probable cause clearly in their incident report. Handcuffing will be double-locked and checked for fit once applied.</p>
+          <p>Miranda warnings must be read prior to any custodial interrogation. Statements made in response to un-Mirandized custodial questioning may be inadmissible and should be noted accordingly in the report.</p>
+          <p>Arrestees are to be searched incident to arrest, secured safely in the transport vehicle, and transported directly to booking absent an authorized detour for medical clearance.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">09</span><span class="acc-title">Traffic Stops</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <p>Officers will select a safe location to conduct a stop, activate emergency lighting, and notify dispatch of location, plate, and vehicle description prior to approach whenever possible.</p>
+          <p>Approach the vehicle from the driver's side rear quarter unless traffic conditions dictate a passenger-side approach. Maintain a visible position relative to vehicle occupants at all times.</p>
+          <p>Explain the reason for the stop, request documentation, and process the encounter (warning, citation, or arrest) as appropriate to the violation observed.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">10</span><span class="acc-title">Civilian Contacts</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <p>Consensual encounters, investigative detentions, and arrests are legally distinct and officers must be able to articulate which category applies to a given contact and the legal basis supporting it.</p>
+          <p>Officers will identify themselves by name and department at the start of an enforcement contact unless doing so would jeopardize officer safety or an ongoing investigation.</p>
+          <p>Members of the public are free to decline a consensual encounter and walk away absent reasonable suspicion of criminal activity justifying a detention.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">11</span><span class="acc-title">Pursuits</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <p>Vehicle pursuits will be initiated only for offenses serious enough to justify the risk to officers and the public, and must be continuously evaluated against that risk as the pursuit develops.</p>
+          <p>The primary unit will broadcast location, direction of travel, speed, and traffic conditions continuously. A supervisor may terminate any pursuit at their discretion.</p>
+          <p>Units not directly involved in the pursuit will not join without authorization from the supervising unit or dispatch, to avoid unnecessary congestion of the pursuit corridor.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">12</span><span class="acc-title">Report Writing</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <p>Reports must be factual, chronological, and free of subjective opinion beyond what is required to establish probable cause or officer observations. Use the reporting party's own words where relevant, in quotation marks.</p>
+          <p>All reports involving arrest, use of force, or property seizure must be submitted and approved by a supervisor before the end of the reporting officer's shift, absent an approved extension.</p>
+          <p>Body camera footage, when applicable, should be referenced by timestamp in the narrative to assist future review.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">13</span><span class="acc-title">Evidence Handling</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <p>All evidence must be logged, photographed in place prior to collection when feasible, and packaged to prevent contamination or loss. Chain of custody documentation begins at the moment of seizure.</p>
+          <p>Evidence is to be submitted to the evidence unit before end of shift. Any evidence retained overnight in a vehicle or locker must be logged with a supervisor's countersignature.</p>
+          <p>Officers who discover a break in chain of custody must report it to a supervisor immediately rather than attempting to correct documentation retroactively.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">14</span><span class="acc-title">Court Procedures</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <p>Officers subpoenaed for court appearances are required to attend in proper uniform or approved civilian attire and to review their report and any relevant footage beforehand.</p>
+          <p>Testimony must be limited to firsthand knowledge and documented facts. Officers should never speculate or embellish testimony to bolster a case.</p>
+          <p>Any scheduling conflict with a court appearance must be raised with a supervisor as early as possible so it can be resolved through the department's liaison with the court.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">15</span><span class="acc-title">Officer Safety</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <p>Officers are expected to maintain situational awareness at all times, request backup for any contact that presents an elevated risk, and avoid unnecessarily isolating themselves from support during high-risk contacts.</p>
+          <p>Cover officers should position themselves to observe the contact officer and any subjects without narrowing their own field of view or creating a crossfire risk with other units.</p>
+          <p>Any officer who reports feeling unsafe on a call has full authority to request additional units or disengage until backup arrives, without requiring further justification in the moment.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">16</span><span class="acc-title">Probationary Officers</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <p>Newly appointed officers serve a probationary period during which they are paired with a Field Training Officer and evaluated on report writing, radio discipline, tactical decision-making, and professionalism.</p>
+          <p>Probationary officers may not operate as a solo unit or serve as the primary unit on high-risk calls until cleared by their Field Training Officer and approved by a Watch Commander.</p>
+          <p>Performance concerns during probation are documented in weekly evaluations and shared directly with the officer to allow for correction before the probationary period concludes.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">17</span><span class="acc-title">Leave Policy</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <p>Requests for scheduled leave should be submitted to a shift supervisor with as much advance notice as reasonably possible so shift coverage can be arranged.</p>
+          <p>Extended leave of absence requests are reviewed by Command Staff and communicated back to the requesting officer with an expected return timeline where applicable.</p>
+          <p>Officers returning from extended leave may be required to complete a brief refresher review with their supervisor before resuming solo patrol duties.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">18</span><span class="acc-title">Attendance</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <p>Officers are expected to attend their assigned shifts and briefings punctually. Repeated unexcused absence or tardiness is addressed first through supervisor counseling and, if uncorrected, through formal discipline.</p>
+          <p>Officers unable to attend a scheduled shift are expected to notify their supervisor as far in advance as possible so shift coverage can be adjusted.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">19</span><span class="acc-title">Promotions</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <p>Promotions are based on demonstrated proficiency, time in grade, leadership potential, and a clean disciplinary record. Command Staff review candidates against a standard set of criteria rather than seniority alone.</p>
+          <p>Officers seeking promotion may be asked to complete a written or practical evaluation appropriate to the rank sought, in addition to a review of their service record.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">20</span><span class="acc-title">Discipline</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <p>Discipline follows a progressive model where appropriate: verbal counseling, written reprimand, suspension, and termination, scaled to the severity and frequency of the infraction.</p>
+          <p>Serious violations, including dishonesty, excessive force, or abuse of authority, may bypass progressive discipline and result in immediate suspension pending an internal affairs review.</p>
+          <p>Officers under review retain the right to explain their actions to the reviewing supervisor before final disciplinary action is determined.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">21</span><span class="acc-title">Resignations</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <p>Officers who wish to resign are asked to provide written notice to their supervisor and to complete an out-processing checklist covering the return of issued equipment, credentials, and vehicle access.</p>
+          <p>Exit interviews are optional but encouraged, and provide Command Staff with feedback used to improve training and department operations.</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOP ============ -->
+<section class="section section-alt" id="sop">
+  <div class="section-inner">
+    <p class="section-eyebrow">TACTICAL REFERENCE</p>
+    <h2 class="section-title">Standard Operating Procedures</h2>
+    <p class="section-lede">Numbered field procedures for common and high-risk scenarios. SOPs supplement, and do not replace, the judgment of the officer on scene.</p>
+
+    <div class="accordion" id="sopAccordion" data-searchable="sop">
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">S1</span><span class="acc-title">Traffic Stops</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <ol>
+            <li>Select a safe stop location and activate emergency lighting.</li>
+            <li>Notify dispatch of plate, location, and number of occupants.</li>
+            <li>Approach with awareness of traffic flow and occupant movement.</li>
+            <li>Request license and registration; explain the reason for the stop.</li>
+            <li>Run the license and plate through dispatch before returning to the vehicle.</li>
+            <li>Issue a warning, citation, or proceed to arrest procedures as warranted.</li>
+            <li>Clear the stop and advise dispatch of the outcome.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">S2</span><span class="acc-title">Felony Stops</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <ol>
+            <li>Position patrol vehicle to provide cover, offset from the suspect vehicle.</li>
+            <li>Request backup and wait for at least one additional unit before proceeding when feasible.</li>
+            <li>Give loud, clear verbal commands from a position of cover.</li>
+            <li>Direct occupants out one at a time, hands visible, walking backward toward officers.</li>
+            <li>Handcuff and search each subject before moving to the next.</li>
+            <li>Clear the vehicle once all occupants are secured.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">S3</span><span class="acc-title">Foot Pursuits</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <ol>
+            <li>Broadcast direction and description of the fleeing subject immediately.</li>
+            <li>Continuously update location as the pursuit progresses.</li>
+            <li>Evaluate terrain, visibility, and backup availability throughout.</li>
+            <li>Disengage if the subject enters an unsecured structure without backup present, absent an immediate threat to others.</li>
+            <li>Coordinate a perimeter with responding units if the subject is lost from sight.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">S4</span><span class="acc-title">Vehicle Pursuits</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <ol>
+            <li>Confirm justification for pursuit against the severity of the underlying offense.</li>
+            <li>Broadcast location, speed, and direction of travel continuously.</li>
+            <li>Designate a primary and secondary unit; all other units remain clear of the pursuit path.</li>
+            <li>Request supervisor authorization to continue at defined intervals or upon significant risk change.</li>
+            <li>Terminate immediately upon supervisor order or when risk to the public outweighs the need for apprehension.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">S5</span><span class="acc-title">Domestic Violence</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <ol>
+            <li>Separate involved parties upon arrival and interview individually.</li>
+            <li>Identify the primary aggressor based on injuries, statements, and prior history.</li>
+            <li>Document visible injuries with photographs where possible.</li>
+            <li>Advise victims of available resources and protective order procedures.</li>
+            <li>Effect arrest where probable cause for an offense exists, consistent with department policy.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">S6</span><span class="acc-title">Shots Fired</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <ol>
+            <li>Broadcast "shots fired" along with location and direction if known.</li>
+            <li>Move to cover and assess for injured officers or civilians.</li>
+            <li>Establish a perimeter and request additional units.</li>
+            <li>Render first aid or request EMS for any injured persons once the scene is reasonably secure.</li>
+            <li>Preserve the scene for evidence collection once secured.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">S7</span><span class="acc-title">Barricaded Subjects</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <ol>
+            <li>Establish an inner and outer perimeter at a safe distance.</li>
+            <li>Notify a supervisor and request SWAT and negotiator response.</li>
+            <li>Evacuate nearby civilians where it can be done safely.</li>
+            <li>Attempt to establish communication only under the direction of a negotiator or supervisor.</li>
+            <li>Hold position and maintain the perimeter until relieved or the incident is resolved.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">S8</span><span class="acc-title">Officer Down</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <ol>
+            <li>Broadcast "officer down" with exact location immediately.</li>
+            <li>All available units respond code 3 unless directed otherwise by dispatch or a supervisor.</li>
+            <li>Render immediate first aid and request EMS to stage nearby.</li>
+            <li>Secure the immediate area to allow safe medical access.</li>
+            <li>Designate a unit to escort or guide EMS to the officer's location.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">S9</span><span class="acc-title">Medical Calls</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <ol>
+            <li>Request EMS response with a description of the nature of the medical emergency.</li>
+            <li>Provide basic first aid within the officer's training until EMS arrives.</li>
+            <li>Secure the scene for EMS access, including crowd or traffic control as needed.</li>
+            <li>Gather basic information for the incident report once the patient is stable or transported.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">S10</span><span class="acc-title">Search Warrants</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <ol>
+            <li>Confirm the warrant is signed, current, and matches the location to be searched.</li>
+            <li>Brief all participating units on entry plan, roles, and known risks beforehand.</li>
+            <li>Announce presence and authority prior to entry, absent a court-approved no-knock exception.</li>
+            <li>Clear and secure the location before the search team begins collecting evidence.</li>
+            <li>Log all seized items on scene with a corresponding inventory left with occupants.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">S11</span><span class="acc-title">Arrest Warrants</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <ol>
+            <li>Verify warrant validity and subject identity through dispatch prior to service.</li>
+            <li>Conduct surveillance or briefing on the subject's last known location where practical.</li>
+            <li>Approach with sufficient units to safely take the subject into custody.</li>
+            <li>Advise the subject of the warrant and transport to booking upon arrest.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">S12</span><span class="acc-title">Evidence Collection</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <ol>
+            <li>Photograph evidence in its original position before collection.</li>
+            <li>Package each item separately to prevent cross-contamination.</li>
+            <li>Label each item with case number, date, time, and collecting officer.</li>
+            <li>Log chain of custody beginning at the point of collection.</li>
+            <li>Submit evidence to the evidence unit before end of shift.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">S13</span><span class="acc-title">K9 Requests</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <ol>
+            <li>Request K9 through dispatch, providing a summary of the situation and location.</li>
+            <li>Establish a perimeter and clear the deployment area of uninvolved persons.</li>
+            <li>Give way to the K9 handler's direction for deployment and announcements.</li>
+            <li>Document the deployment and outcome in the incident report.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">S14</span><span class="acc-title">Air Support</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <ol>
+            <li>Request air support through dispatch with the nature of the call and last known location.</li>
+            <li>Provide ground units' positions to avoid confusion during aerial tracking.</li>
+            <li>Coordinate containment points as directed by the air unit.</li>
+            <li>Maintain radio discipline to keep the air-to-ground channel clear.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">S15</span><span class="acc-title">Crash Investigations</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <ol>
+            <li>Secure the scene and request EMS if injuries are reported.</li>
+            <li>Direct traffic around the scene to prevent secondary collisions.</li>
+            <li>Photograph vehicle positions, damage, and relevant road conditions.</li>
+            <li>Interview involved parties and witnesses separately.</li>
+            <li>Complete a crash report documenting findings and any citations issued.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">S16</span><span class="acc-title">Active Shooter</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <ol>
+            <li>First arriving units move directly toward the threat to stop the killing.</li>
+            <li>Form a contact team of available officers rather than waiting for full staging.</li>
+            <li>Bypass injured persons initially; follow-on units handle rescue and medical tasks.</li>
+            <li>Communicate suspect description and location continuously as the team moves.</li>
+            <li>Establish rescue task force coordination with EMS once the threat is neutralized or contained.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">S17</span><span class="acc-title">Hostage Incidents</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <ol>
+            <li>Contain the location and establish a perimeter without direct confrontation.</li>
+            <li>Notify Command Staff and request negotiator and SWAT response.</li>
+            <li>Gather intelligence on hostage-taker demands, number of hostages, and layout.</li>
+            <li>Defer all communication with the hostage-taker to trained negotiators.</li>
+            <li>Maintain perimeter security until a resolution is reached.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">S18</span><span class="acc-title">Use of Force Continuum</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <ol>
+            <li>Officer presence and verbal commands — the baseline for nearly all contacts.</li>
+            <li>Soft empty-hand control for non-compliant but non-threatening subjects.</li>
+            <li>Hard empty-hand control or intermediate weapons for active resistance.</li>
+            <li>Less-lethal tools for assaultive resistance that does not present a deadly threat.</li>
+            <li>Deadly force, reserved solely for an imminent threat of death or serious bodily injury.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">S19</span><span class="acc-title">Miranda Rights</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <ol>
+            <li>Determine whether the subject is in custody and about to be interrogated.</li>
+            <li>Read the standard Miranda warning clearly, in a language the subject understands.</li>
+            <li>Confirm the subject understands each right before proceeding with questioning.</li>
+            <li>Document the warning, time given, and the subject's response in the report.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary><span class="acc-num">S20</span><span class="acc-title">Incident Documentation</span><span class="acc-chevron"></span></summary>
+        <div class="acc-body">
+          <ol>
+            <li>Note the time of dispatch, arrival, and clearance for every call.</li>
+            <li>Record all involved parties, witnesses, and their statements.</li>
+            <li>Attach photographs, body camera references, and evidence logs where applicable.</li>
+            <li>Submit the completed report for supervisor review before end of shift.</li>
+          </ol>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ POLICIES ============ -->
+<section class="section" id="policies">
+  <div class="section-inner">
+    <p class="section-eyebrow">GOVERNANCE</p>
+    <h2 class="section-title">Department Policies</h2>
+    <p class="section-lede">Core policy commitments that apply across every division and rank.</p>
+
+    <div class="policy-grid" data-searchable="policies">
+      <article class="policy-card reveal">
+        <div class="policy-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="1.8"/></svg>
+        </div>
+        <h3>Professionalism</h3>
+        <p>All personnel represent the department in every interaction. Courteous, composed conduct is expected regardless of how a situation escalates.</p>
+      </article>
+      <article class="policy-card reveal">
+        <div class="policy-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.8"/><path d="M4.5 20c1.4-4 4.2-6 7.5-6s6.1 2 7.5 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Bias-Free Policing</h3>
+        <p>Enforcement decisions are based on behavior and evidence, never on race, gender, religion, or any other protected characteristic.</p>
+      </article>
+      <article class="policy-card reveal">
+        <div class="policy-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="5" y="7" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M15 10l4-2v8l-4-2" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Body Camera Policy</h3>
+        <p>Body cameras are activated for all enforcement contacts and calls for service, and footage is retained per department retention schedules.</p>
+      </article>
+      <article class="policy-card reveal">
+        <div class="policy-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="3" y="9" width="18" height="9" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 9V6a4 4 0 018 0v3" stroke="currentColor" stroke-width="1.8"/></svg>
+        </div>
+        <h3>Vehicle Operation</h3>
+        <p>Patrol vehicles are operated safely and lawfully, with emergency equipment used only in accordance with pursuit and response policy.</p>
+      </article>
+      <article class="policy-card reveal">
+        <div class="policy-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" stroke="currentColor" stroke-width="1.8"/><path d="M9.5 12l1.8 1.8L15 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Officer Appearance</h3>
+        <p>Uniform and grooming standards maintain a consistent, professional department image across every shift and division.</p>
+      </article>
+      <article class="policy-card reveal">
+        <div class="policy-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 20h8M12 16v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Social Media Policy</h3>
+        <p>Personal social media activity must not disclose confidential case information or misrepresent department positions.</p>
+      </article>
+      <article class="policy-card reveal">
+        <div class="policy-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="5" y="10" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V7a4 4 0 118 0v3" stroke="currentColor" stroke-width="1.8"/></svg>
+        </div>
+        <h3>Confidentiality</h3>
+        <p>Case details, personnel records, and ongoing investigations are shared only on a need-to-know basis within the department.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMMAND STAFF ============ -->
+<section class="section section-alt" id="command">
+  <div class="section-inner">
+    <p class="section-eyebrow">CHAIN OF COMMAND</p>
+    <h2 class="section-title">Command Staff</h2>
+    <p class="section-lede">The leadership structure overseeing department operations, policy, and discipline.</p>
+
+    <div class="staff-grid">
+      <article class="staff-card reveal">
+        <div class="staff-photo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c1.5-4.5 4.5-6.5 7-6.5s5.5 2 7 6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <p class="staff-rank">Chief of Police</p>
+        <p class="staff-name">S.Renn</p>
+        <p class="staff-desc">Holds ultimate authority and accountability for department operations, policy direction, and public trust.</p>
+      </article>
+      <article class="staff-card reveal">
+        <div class="staff-photo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c1.5-4.5 4.5-6.5 7-6.5s5.5 2 7 6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <p class="staff-rank">Assistant Chief</p>
+        <p class="staff-name">N/A</p>
+        <p class="staff-desc">Supports the Chief of Police in day-to-day operations and stands in during periods of absence.</p>
+      </article>
+      <article class="staff-card reveal">
+        <div class="staff-photo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c1.5-4.5 4.5-6.5 7-6.5s5.5 2 7 6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <p class="staff-rank">Deputy Chief</p>
+        <p class="staff-name">N/A</p>
+        <p class="staff-desc">Oversees a major operational bureau and reports directly to the Assistant Chief.</p>
+      </article>
+      <article class="staff-card reveal">
+        <div class="staff-photo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c1.5-4.5 4.5-6.5 7-6.5s5.5 2 7 6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <p class="staff-rank">Major</p>
+        <p class="staff-name">N/A</p>
+        <p class="staff-desc">Commands a division-level command staff and coordinates between captains and department leadership.</p>
+      </article>
+      <article class="staff-card reveal">
+        <div class="staff-photo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c1.5-4.5 4.5-6.5 7-6.5s5.5 2 7 6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <p class="staff-rank">Captain</p>
+        <p class="staff-name">N/A</p>
+        <p class="staff-desc">Manages a specific precinct or specialty unit, including scheduling, training, and performance oversight.</p>
+      </article>
+      <article class="staff-card reveal">
+        <div class="staff-photo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c1.5-4.5 4.5-6.5 7-6.5s5.5 2 7 6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <p class="staff-rank">Lieutenant</p>
+        <p class="staff-name">Name Placeholder</p>
+        <p class="staff-desc">Serves as Watch Commander for an assigned shift, directly supervising sergeants and patrol operations.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RADIO CODES ============ -->
+<section class="section section-alt" id="codes">
+  <div class="section-inner">
+    <p class="section-eyebrow">COMMS REFERENCE</p>
+    <h2 class="section-title">Radio Codes</h2>
+    <p class="section-lede">Standard radio codes used across department channels. Use the search box above to filter this table instantly.</p>
+
+    <div class="code-filter-row">
+      <button class="filter-chip active" data-filter="all">All</button>
+      <button class="filter-chip" data-filter="10-code">10 Codes</button>
+      <button class="filter-chip" data-filter="signal">Signal Codes</button>
+      <button class="filter-chip" data-filter="status">Status Codes</button>
+      <button class="filter-chip" data-filter="priority">Priority Levels</button>
+    </div>
+
+    <div class="code-table-wrap" data-searchable="codes">
+      <table class="code-table" id="codeTable">
+        <thead>
+          <tr><th>Code</th><th>Meaning</th><th>Category</th></tr>
+        </thead>
+        <tbody id="codeTableBody">
+          <!-- populated by script.js -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" id="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-badge" aria-hidden="true">
+        <svg viewBox="0 0 48 48" width="26" height="26">
+          <path d="M24 3 L43 11 V22 C43 33 35.5 41.5 24 45 C12.5 41.5 5 33 5 22 V11 Z" fill="none" stroke="currentColor" stroke-width="2.4"/>
+        </svg>
+      </span>
+      <div>
+        <p class="footer-title">Fort Worth Police Department</p>
+        <p class="footer-tag">Integrity • Service • Professionalism</p>
+      </div>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer">
+      <a href="#home">Home</a>
+      <a href="#handbook">Handbook</a>
+      <a href="#sop">SOP</a>
+      <a href="#policies">Policies</a>
+      <a href="#command">Command Staff</a>
+      <a href="#codes">Radio Codes</a>
+    </nav>
+
+    <div class="footer-social" aria-label="Social links">
+      <a href="#" aria-label="Discord"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M8 9c1.2-.6 2.5-.9 4-.9s2.8.3 4 .9M6 16c3.5 1.6 8.5 1.6 12 0M7 16c-1.2 1.4-2 1.9-3 2 0-2 .3-6.5 2-9.5C7.5 6.7 9.6 6 12 6s4.5.7 6 2.5c1.7 3 2 7.5 2 9.5-1-.1-1.8-.6-3-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="#" aria-label="Twitter/X"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+      <a href="#" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M11 10l4 2-4 2v-4z" fill="currentColor"/></svg></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Fort Worth Police Department — Roleplay Server. Fictional department for community roleplay purposes only.</p>
+  </div>
+</footer>
+
+<script src="js/script.js" defer></script>
+</body>
+</html>
